@@ -9,10 +9,10 @@
 <body>
     <form action="">
         <label for="title">文章標題</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" required placeholder="請輸入文章標題">
         <br>
         <label for="author1">文章作者</label>
-        <input type="text" name="author" id="author1">
+        <input type="text" name="author" id="author1" readonly>
         <br>
         <label for="public_date">發布日期</label>
         <input type="date" name="public_date" id="public_date">
@@ -59,7 +59,7 @@
         </select>
         <br>
         <label for="content">文章內容</label>
-        <textarea name="content" id="content" cols="20" rows="10"></textarea>
+        <textarea name="content" id="content" cols="20" rows="10" placeholder="請輸入內容"></textarea>
         <br>
         <input type="submit">
     </form>
