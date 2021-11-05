@@ -28,24 +28,35 @@
         <br>
         <label>文章狀態</label>
 
-        <input type="radio" id="published" name="status">
+        <input type="radio" id="published" name="status" value="上架">
         <label for="published">上架</label>
 
-        <input type="radio" id="removed" name="status">
+        <input type="radio" id="removed" name="status" value="下架">
         <label for="removed">下架</label>
         
         <br>
 
         <label>文章分類</label>
 
-        <input type="checkbox" name="tag" id="tech">
+        <input type="checkbox" name="tag" id="tech" value="科技">
         <label for="tech">科技</label>
 
-        <input type="checkbox" name="tag" id="food">
+        <input type="checkbox" name="tag" id="food" value="美食">
         <label for="food">美食</label>
 
-        <input type="checkbox" name="tag" id="life">
+        <input type="checkbox" name="tag" id="life" value="生活">
         <label for="life">生活</label>
+
+        <br>
+
+        <label for="test">測試</label>
+        <select name="test" id="test">
+            <option value="選項一">選項一</option>
+            <option value="選項二">選項二</option>
+            <option value="選項三">選項三</option>
+            <option value="選項四">選項四</option>
+            <option value="選項五">選項五</option>
+        </select>
 
         <br>
         <input type="submit">
