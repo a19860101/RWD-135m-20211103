@@ -4,7 +4,7 @@ h2 {
     color: orange;
 }
 
-/* 類別選取器 class*/
+/* 類別選取器 class(可重複使用)*/
 
 .abc {
     color:palevioletred;
@@ -15,8 +15,13 @@ h2 {
     不可使用特殊符號除了 _ -
 */
 
-/* id選取器 */
+/* id選取器 (只可使用一次)*/
 
 #xyz {
-    color: #e92af0;
+    color: #2a3ef0;
 }
+/* 
+    權重-套用css的優先順序
+    影響的元素越少，權重越重(物以稀為貴)
+
+*/
