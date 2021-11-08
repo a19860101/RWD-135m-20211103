@@ -1,0 +1,16 @@
+/* 標籤選取器 */
+
+h2 {
+    color: orange;
+}
+
+/* 類別選取器 class*/
+
+.abc {
+    color:palevioletred;
+}
+
+/* 
+    首字只可使用英文、底線
+    不可使用特殊符號除了 _ -
+*/
