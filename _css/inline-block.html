@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            font-size: 0;
+        }
         .box {
             width: 200px;
 
@@ -13,7 +16,23 @@
 
             display: inline-block;
             padding: 15px;
+            font-size: 16px;
+
+            vertical-align: top;
+            /* 
+                top,middle,bottom,basline
+            */
         }
+        /* 
+            inline-block 問題
+            元素之間會有4px不等的空隙
+
+            解決方式
+            1. 父元素的font-size設定為0
+            2. 自己的font-size還原
+            3. 設定vertical-align
+
+        */
     </style>
 </head>
 <body>
@@ -22,8 +41,11 @@
     </div>
     <div class="box">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ducimus, illum adipisci vitae quae fugiat quibusdam repellat magnam et! Quod, animi! Corrupti numquam tempore porro maxime nulla magni quisquam tempora?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ducimus, illum adipisci vitae quae fugiat quibusdam repellat magnam et! Quod, animi! Corrupti numquam tempore porro maxime nulla magni quisquam tempora?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ducimus, illum adipisci vitae quae fugiat quibusdam repellat magnam et! Quod, animi! Corrupti numquam tempore porro maxime nulla magni quisquam tempora?
     </div>
     <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ducimus, illum adipisci vitae quae fugiat quibusdam repellat magnam et! Quod, animi! Corrupti numquam tempore porro maxime nulla magni quisquam tempora?
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ducimus, illum adipisci vitae quae fugiat quibusdam repellat magnam et! Quod, animi! Corrupti numquam tempore porro maxime nulla magni quisquam tempora?
     </div>
 </body>
