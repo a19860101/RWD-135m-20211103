@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Gill Sans MT';
+        }
+        .container {
+            width: 1200px;
+            /* height: 1000px; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .box {
+            padding: 15px;
+            /* width: 400px; */
+            flex-basis: calc(100% / 3);
+            /* 
+                flex-direction為row時，flex-basis代表寬度
+                flex-direction為column時，flex-basis代表高度
+            */
+            background-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea dolores minima. Quisquam, recusandae harum. Deserunt numquam distinctio illum vero incidunt voluptates ipsa corrupti commodi error! Suscipit modi accusantium deleniti!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea dolores minima. Quisquam, recusandae harum. Deserunt numquam distinctio illum vero incidunt voluptates ipsa corrupti commodi error! Suscipit modi accusantium deleniti!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea dolores minima. Quisquam, recusandae harum. Deserunt numquam distinctio illum vero incidunt voluptates ipsa corrupti commodi error! Suscipit modi accusantium deleniti!
+            </p>
+        </div>
+    </section>
+</body>
+</html>
