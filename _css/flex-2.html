@@ -15,19 +15,37 @@
             /* height: 1000px; */
             margin: auto;
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            background-color: #ccc;
         }
         .box {
             padding: 15px;
             /* width: 400px; */
-            flex-basis: calc(100% / 3);
+            flex-basis: 600px;
             /* 
                 flex-direction為row時，flex-basis代表寬度
                 flex-direction為column時，flex-basis代表高度
             */
+            /* flex-grow: ; */
+            flex-shrink: 0;
             background-color: #fa0;
+            
         }
+        .box:nth-of-type(1){
+            background-color: #098;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        .box:nth-of-type(3){
+            background-color: #ff6969;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        /* 
+            flex-wrap 與 flex-shrink有衝突
+            當wrap開啟時，shrink失效
+        */
     </style>
 </head>
 <body>
