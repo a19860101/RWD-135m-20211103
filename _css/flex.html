@@ -11,7 +11,9 @@
         }
         .container {
             display: flex;
-            width: 1200px;
+            width: 1600px;
+            height: 1000px;
+            background-color: #ccc;
             margin: auto;
             /* flex-direction: row; */
             /* row, column, row-reverse, column-reverse */
@@ -20,10 +22,27 @@
             /* wrap, no-wrap,wrap-reverse */
 
             flex-flow: row wrap;
+
+            /* 水平對齊 */
+            justify-content: space-around;
+            /* flex-start, flex-end, center,
+               space-around,space-between, space-evenly 
+            */
+
+            /* 垂直對齊 */
+            align-items: center;
+            /* 
+                flex-start, flex-end, center
+                stretch, baseline
+            */
+
+           
+
         }
         .box {
-            width: 400px;
+            width: 200px;
             padding: 15px;
+            background-color: #c98;
         }
     </style>
 </head>
@@ -31,28 +50,32 @@
     <section class="container">
         <div class="box">
             <h2>title 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.
+            </p>
         </div>
         <div class="box">
             <h2>title 2</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.
+            </p>
         </div>
         <div class="box">
             <h2>title 3</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.
+            </p>
         </div>
         <div class="box">
             <h2>title 4</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.
+            </p>
         </div>
-        <div class="box">
-            <h2>title 5</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.</p>
-        </div>
-        <div class="box">
-            <h2>title 6</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore rem repellendus impedit, qui dolorem aliquam. Eos perferendis non, iure dolorum ullam quisquam delectus vel ut minima, est et.</p>
-        </div>
+
     </section>
 </body>
 </html>
