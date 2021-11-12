@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1000px;
+            margin: auto;
+
+            background-color: #ccc;
+            /* height: 500px; */
+            /* overflow: auto; */
+            display: flow-root;
+            
+        }
+        .box {
+            width: calc(100% / 3);
+            padding: 10px;
+            float: left;
+        }
+        /* 
+            父元素崩塌:當子元素都是浮動時，父元素的高度會歸零
+            1. 高度
+            2. overflow
+            3. flow-root
+        
+        */
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at incidunt voluptatibus veritatis maxime! Impedit, voluptate? Temporibus fugiat quasi quidem vitae quos eum. Eligendi minima optio earum deleniti deserunt aperiam!
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at incidunt voluptatibus veritatis maxime! Impedit, voluptate? Temporibus fugiat quasi quidem vitae quos eum. Eligendi minima optio earum deleniti deserunt aperiam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at incidunt voluptatibus veritatis maxime! Impedit, voluptate? Temporibus fugiat quasi quidem vitae quos eum. Eligendi minima optio earum deleniti deserunt aperiam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at incidunt voluptatibus veritatis maxime! Impedit, voluptate? Temporibus fugiat quasi quidem vitae quos eum. Eligendi minima optio earum deleniti deserunt aperiam!
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at incidunt voluptatibus veritatis maxime! Impedit, voluptate? Temporibus fugiat quasi quidem vitae quos eum. Eligendi minima optio earum deleniti deserunt aperiam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at incidunt voluptatibus veritatis maxime! Impedit, voluptate? Temporibus fugiat quasi quidem vitae quos eum. Eligendi minima optio earum deleniti deserunt aperiam!
+        </div>
+    </section>
+</body>
+</html>
