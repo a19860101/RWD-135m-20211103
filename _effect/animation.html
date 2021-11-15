@@ -10,8 +10,24 @@
             width: 100px;
             height: 100px;
             background-color: #0af;
+            /* opacity: 0; */
 
-            animation: move 6s;
+            /* animation: move 6s; */
+            animation-name: go;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-direction: normal;
+            /* normal, reverse, alternate, alternate-reverse */
+            animation-iteration-count: 1;
+
+            animation-fill-mode: forwards;
+            /* forwards,backwards */
+
+            animation-timing-function: ease;
+            /* ease, ease-in, ease-out, ease-in-out, linear */
+
+            /* animation-play-state: paused; */
+            /* play, paused */
         }
 
         @keyframes fade-in {
@@ -29,6 +45,10 @@
             50% {transform: translateX(600px)translateY(600px)rotate(180deg)}
             75% {transform: translateX(0)translateY(600px)rotate(270deg)}
             100% {transform: translateX(0)translateY(0)rotate(360deg)}
+        }
+        @keyframes go {
+            from {transform: translateX(0)}
+            to {transform: translateX(300px)}
         }
     </style>
 </head>
