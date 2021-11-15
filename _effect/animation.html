@@ -11,7 +11,7 @@
             height: 100px;
             background-color: #0af;
 
-            animation: move 1s;
+            animation: move 6s;
         }
 
         @keyframes fade-in {
@@ -24,10 +24,11 @@
             }
         }
         @keyframes move {
-            from {}
-            to {
-                transform: translateX(600px);
-            }
+            0% {}
+            25% {transform: translateX(600px)translateY(0)rotate(90deg)}
+            50% {transform: translateX(600px)translateY(600px)rotate(180deg)}
+            75% {transform: translateX(0)translateY(600px)rotate(270deg)}
+            100% {transform: translateX(0)translateY(0)rotate(360deg)}
         }
     </style>
 </head>
