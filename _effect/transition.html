@@ -7,26 +7,51 @@
     <title>Document</title>
     <style>
         .box {
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             background-color: #bada55;
-
+            transform-origin: left;
             /* transition: .6s; */
+            margin-bottom: 20px;
 
-            transition-property: background-color,transform;
-            transition-duration: 1s;
-            transition-delay: 0s,1s;
-            transition-timing-function: ease;
+            transition-property: all;
+            transition-duration: 3s;
+            transition-delay: 0s;
+            /* transition-timing-function: linear; */
             /* ease, ease-in, ease-out, ease-in-out, linear */
         }
         /* 虛擬類別 */
-        .box:hover {
+        /* .box:hover {
             background-color: #e04;
-            transform: scale(.5)rotate(45deg);
+            width: 600px;
+        } */
+        .container:hover .box {
+            transform: scaleX(8);
+        }
+        .box:nth-of-type(1){
+            transition-timing-function: ease;
+        }
+        .box:nth-of-type(2){
+            transition-timing-function: ease-in;
+        }
+        .box:nth-of-type(3){
+            transition-timing-function: ease-out;
+        }
+        .box:nth-of-type(4){
+            transition-timing-function: ease-in-out;
+        }
+        .box:nth-of-type(5){
+            transition-timing-function: linear;
         }
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 </body>
 </html>
