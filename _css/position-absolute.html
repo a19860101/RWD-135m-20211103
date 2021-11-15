@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #098;
+            /* 
+                絕對定位: 以最靠近且有設定定位(不包括static)的父元素為基準的定位，若沒有則以body為基準
+            */
+
+            position: absolute;
+            right:100px;
+            top: 100px;
+
+            z-index: 11;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #ff6969;
+            right: 0;
+            position: absolute;
+            z-index: 10;
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: #aaa;
+        
+            position: static;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
