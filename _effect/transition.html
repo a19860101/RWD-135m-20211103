@@ -11,7 +11,13 @@
             height: 200px;
             background-color: #bada55;
 
-            transition: .6s;
+            /* transition: .6s; */
+
+            transition-property: background-color,transform;
+            transition-duration: 1s;
+            transition-delay: 0s,1s;
+            transition-timing-function: ease;
+            /* ease, ease-in, ease-out, ease-in-out, linear */
         }
         /* 虛擬類別 */
         .box:hover {
