@@ -135,6 +135,22 @@ header h1 {
 }
 #service li {
     list-style: none;
+    border-bottom: solid 1px #c3c3c3;
+    padding: 10px 0;
+}
+#service h3 {
+    border-bottom: solid 2px #c3c3c3;
+    padding: 10px 0;
+}
+#service a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #fa0;
+    border-radius: 5px;
+    float: right;
 }
 #service h2 {
     text-align: center;
@@ -147,4 +163,5 @@ header h1 {
     border: 1px solid #c3c3c3;
     border-radius: 5px;
     padding: 15px;
+    overflow: auto;
 }
