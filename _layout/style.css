@@ -60,9 +60,17 @@ header h1 {
     padding-bottom: 150px;
 }
 .about-icon {
-    width: 100px;
+    width: 150px;
     margin:0 auto 30px;
     text-align: center;
+
+    background-color: #fa0;
+    height: 150px;
+    border-radius: 50%;
+}
+.about-icon i {
+    line-height: 150px;
+    color: #fff;
 }
 .about-content {
     text-align: center;
