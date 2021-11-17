@@ -88,17 +88,28 @@ header h1 {
     display: block;
     color: #fff;
     font-size: 1.4rem;
+
+    overflow: hidden;
 }
 .folio-title {
     position: absolute;
-    background-color: rgba(0,0,0,.5);
+    /* background-color: rgba(0,0,0,.5); */
+    background-image: linear-gradient(transparent,rgba(0,0,0,.7));
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+
+
+    transition: .5s;
+}
+.folio-link:hover .folio-title {
+    opacity: 1;
+    height: 100%;
 }
 
 
