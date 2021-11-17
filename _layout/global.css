@@ -8,6 +8,7 @@ body {
 }
 img {
     width: 100%;
+    vertical-align: top;
 }
 
 .container {
@@ -19,4 +20,7 @@ img {
 .col {
     flex: 1 0 0;
     padding: 15px;
+}
+.w-100 {
+    width: 100%;
 }
