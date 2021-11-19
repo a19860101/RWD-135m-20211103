@@ -8,6 +8,9 @@ nav {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #222;
+
+    position: fixed;
+    z-index: 999;
 }
 nav ul {
     list-style: none;
@@ -228,4 +231,23 @@ footer a {
     text-decoration: none;
     color: #fff;
     margin-right: 15px;
+}
+/* gotop */
+.gotop {
+    display: block;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: #222;
+    color: #fff;
+    right: 30px;
+    bottom: 30px;
+    /* border-radius: 50%; */
+    clip-path: circle();
+    text-align: center;
+    line-height: 50px;
+}
+.gotop i {
+    position: relative;
+    top: 5px;
 }
