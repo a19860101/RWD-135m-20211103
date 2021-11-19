@@ -14,6 +14,12 @@ nav {
     position: fixed;
     z-index: 999;
 }
+.nav-logo {
+    margin-right: auto;
+}
+.nav-menu {
+    width: 100%;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -30,12 +36,12 @@ nav a {
     border-radius: 5px;
 }
 /* 虛擬類別 */
-.nav-menu a:hover {
+/* .nav-menu a:hover {
     color: #222;
     background-color: #fa0;
-}
+} */
 nav li {
-    margin: 0 5px;
+    /* margin: 0 5px; */
 }
 /* header */
 
@@ -309,6 +315,7 @@ footer a {
         list-style: none;
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
     }
     nav a {
         text-decoration: none;
