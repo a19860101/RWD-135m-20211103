@@ -215,3 +215,17 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #ffc654;
 }
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    font-size: 14px;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 15px;
+}
