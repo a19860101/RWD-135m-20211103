@@ -4,6 +4,8 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+    flex-direction: column;
+
     /* height: 60px; */
     padding-top: 10px;
     padding-bottom: 10px;
@@ -15,6 +17,8 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+
+    flex-direction: column;
 }
 nav a {
     text-decoration: none;
@@ -285,6 +289,44 @@ footer a {
     
 }
 @media(min-width: 1200px){
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        flex-direction: row;
+
+        /* height: 60px; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #222;
+    
+        position: fixed;
+        z-index: 999;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        padding:10px;
+    
+        transition: .6s;
+        display: block;
+        border-radius: 5px;
+    }
+    /* 虛擬類別 */
+    .nav-menu a:hover {
+        color: #222;
+        background-color: #fa0;
+    }
+    nav li {
+        margin: 0 5px;
+    }
     .about-item {
         flex: 1 0 0;
         padding: 15px;
