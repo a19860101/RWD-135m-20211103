@@ -70,6 +70,7 @@ header h1 {
 }
 .about-item {
     flex: 0 0 100%;
+    padding: 30px;
 }
 .about-icon {
     width: 150px;
@@ -174,7 +175,7 @@ header h1 {
 }
 .service-item {
     flex:0 0 50%;
-    padding: 15px;
+    padding: 10px;
 }
 
 .service-content {
@@ -262,269 +263,44 @@ footer a {
     position: relative;
     top: 5px;
 }
-@media(min-width: 1200px){
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-        /* height: 60px; */
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background-color: #222;
-    
-        position: fixed;
-        z-index: 999;
-    }
-    nav ul {
-        list-style: none;
-        display: flex;
-    }
-    nav a {
-        text-decoration: none;
-        color: #fff;
-        padding:10px;
-    
-        transition: .6s;
-        display: block;
-        border-radius: 5px;
-    }
-    /* 虛擬類別 */
-    .nav-menu a:hover {
-        color: #222;
-        background-color: #fa0;
-    }
-    nav li {
-        margin: 0 5px;
-    }
-    /* header */
-    
-    header {
-        position: relative;
-    }
-    .header-content {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: #fff;
-    }
-    header h1 {
-        font-size: 60px;
-    }
-    
-    /* about */
-    
-    #about {
-        padding-top: 150px;
-        padding-bottom: 150px;
-    }
-    #about h2 {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 30px;
-        font-size: 30px;
-    }
+@media(min-width: 600px){
     .about-item {
-        flex: 1 0 0;
-    }
-    .about-icon {
-        width: 150px;
-        margin:0 auto 30px;
-        text-align: center;
-    
-        background-color: #fa0;
-        height: 150px;
-        border-radius: 50%;
-    }
-    .about-icon i {
-        line-height: 150px;
-        color: #fff;
-    }
-    .about-content {
-        text-align: center;
-        padding-left: 30px;
-        padding-right: 30px;
-        line-height: 2em;
-    }
-    .about-content h3 {
-        margin-bottom: 20px;
-        font-size: 26px;
+        flex: 0 0 33.33333%;
+        padding: 0;
     }
     /* folio */
-    #folio {
-        padding-top: 150px;
-        padding-bottom: 150px;
-        background-color: #fff8eb;
-    }
-    #folio h2 {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 30px;
-        font-size: 30px;
-    }
+    
     .folio-item {
-        flex:0 0 25%;
-        padding: 15px;
+        flex:0 0 33.3333%;
     }
-    .folio-link {
-        position: relative;
-        display: block;
-        color: #fff;
-        font-size: 1.4rem;
-    
-        overflow: hidden;
-    }
-    .folio-title {
-        position: absolute;
-        /* background-color: rgba(0,0,0,.5); */
-        background-image: linear-gradient(transparent,rgba(0,0,0,.7));
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-    
-    
-        transition: .5s;
-    }
-    .folio-link:hover .folio-title {
-        opacity: 1;
-        height: 100%;
+    #folio .w-100 {
+        display: none;
     }
     /* service */
-    #service {
-        padding-top: 150px;
-        padding-bottom: 150px;
-    }
-    #service li {
-        list-style: none;
-        border-bottom: solid 1px #c3c3c3;
-        padding: 10px 0;
-    }
-    #service h3 {
-        border-bottom: solid 2px #c3c3c3;
-        padding: 10px 0;
-    }
-    #service a {
-        text-decoration: none;
-        color: #000;
-        display: block;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: #fa0;
-        border-radius: 5px;
-        float: right;
-        transition: .5s;
-    }
-    #service a:hover {
-        background-color: #ffc654;
-    }
-    #service h2 {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 30px;
-        font-size: 30px;
-    }
+   
     .service-item {
         flex: 0 0 25%;
         padding: 15px;
     }
-    .service-content {
-        border: 1px solid #c3c3c3;
-        border-radius: 5px;
+    
+}
+@media(min-width: 1200px){
+    .about-item {
+        flex: 1 0 0;
         padding: 15px;
-        overflow: auto;
     }
-    /* contact */
-    #contact h2 {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 30px;
-        font-size: 30px;
+    /* folio */
+    
+    .folio-item {
+        flex:0 0 25%;
     }
-    #contact {
-        padding-top: 150px;
-        padding-bottom: 150px;
-        background-color: #fff8eb;
-    }
-    form {
-        width: 70%;
-        margin: auto;
-    }
-    .form-item {
-        margin-bottom: 15px;
-    }
-    .form-label {
+    #folio .w-100 {
         display: block;
-        margin-bottom: 5px;
     }
-    .form-control {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 2px solid #ffebc2;
-        outline:0;
-        transition: .5s;
-    }
-    .form-control:focus {
-        border: 2px solid #ffbf40;
-    }
-    input[type="submit"] {
-        background-color: #fa0;
-        border: 0;
-        padding: 8px 15px;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: .5s;
-    }
-    input[type="submit"]:hover {
-        background-color: #ffc654;
-    }
-    /* footer */
-    footer {
-        display: flex;
-        justify-content: space-between;
-        background-color: #222;
-        color: #fff;
-        padding: 15px;
-        font-size: 14px;
-    }
-    footer a {
-        text-decoration: none;
-        color: #fff;
-        margin-right: 15px;
-    }
-    /* gotop */
-    .gotop {
-        display: block;
-        position: fixed;
-        width: 50px;
-        height: 50px;
-        background-color: #222;
-        color: #fff;
-        right: 30px;
-        bottom: 30px;
-        /* border-radius: 50%; */
-        clip-path: circle();
-        text-align: center;
-        line-height: 50px;
-    }
-    .gotop i {
-        position: relative;
-        top: 5px;
+    /* service */
+   
+    .service-item {
+        flex: 0 0 25%;
     }
     
 }
