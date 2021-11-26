@@ -38,3 +38,18 @@ console.log(a === b);//值與資料型別皆須相等
 console.log( x>0 && y<0);
 console.log( x>0 || y<0);
 console.log(!x);
+
+// 字串運算子
+
+let user = 'Mary';
+
+console.log(user + '你好');
+
+console.log(a + b);
+
+// 字串樣板
+
+console.log(`${user}你好`);
+
+console.log(`目前共有${x}筆資料`);
+console.log('目前共有' + x + '筆資料');
