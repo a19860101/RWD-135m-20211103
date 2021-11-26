@@ -33,3 +33,16 @@ if(x > 0){
     console.log('error2')
 }
 
+let score = 6;
+
+let result = score >= 60 ? '及格':'不及格';
+
+// let result;
+// if(score >= 60){
+//     result = '及格';
+// }else{
+//     result = '不及格';
+// }
+
+console.log(result);
+
