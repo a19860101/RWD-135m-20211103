@@ -1,14 +1,14 @@
 // 變數
 
-var x = 100;
+// var x = 100;
 
-var x = 'hello';
+// var x = 'hello';
 
-let y = 123;
+// let y = 123;
 
-y = 321;
+// y = 321;
 
-console.log(y);
+// console.log(y);
 
 
 /* 
@@ -23,7 +23,7 @@ console.log(y);
 // 常數
 // 不可重新賦值
 
-const z = 666;
+// const z = 666;
 
 /* 
     var vs let,const
@@ -31,6 +31,17 @@ const z = 666;
     2. var是function scope，let,const則是block scope
 
 */
+
+// 資料型別
+
+let a = 100; //number 數值
+let b = 'hello'; //string 字串
+let c = true; // boolean 布林 (true,false);
+
+let d = null; //空值
+let e = undefined; // 未定義
+let f;
+console.log(f);
 
 
  
