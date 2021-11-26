@@ -53,3 +53,8 @@ console.log(`${user}你好`);
 
 console.log(`目前共有${x}筆資料`);
 console.log('目前共有' + x + '筆資料');
+
+// 三元運算子
+
+// console.log( x > 0 ? 'success':'error');
+console.log( x < 0 ? 'success': x > 0 ? 'success2':'error');
