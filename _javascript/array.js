@@ -12,8 +12,17 @@ let a = ['Apple','Banana','Cat','Dog','Egg','Fork'];
 // console.log(a[1]);
 // console.log(a[2]);
 
-console.log(a.length);
+// console.log(a.length);
 
-for(let i=0;i<a.length;i++){
-    console.log(a[i]);
+// for(let i=0;i<a.length;i++){
+//     console.log(a[i]);
+// }
+
+// for(let data in a){
+    // console.log(data);
+    // console.log(a[data]);
+// }
+
+for(let data of a){
+    console.log(data);
 }
