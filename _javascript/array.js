@@ -45,3 +45,13 @@ let title = 'HELLO_JAVASCRIPT';
 let ary = title.split('_');
 console.log(ary);
 console.log(a);
+
+//indexOf()
+
+console.log(a.indexOf('egg'))
+
+// splice()拼接
+
+// a.splice(1,1,'蘋果');
+a.splice(3,1);
+console.log(a);
