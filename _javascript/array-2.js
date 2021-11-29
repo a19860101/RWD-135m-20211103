@@ -29,4 +29,9 @@ let ary_findIndex = ary.findIndex(function(data){
     return data == '梅子綠茶';
 })
 
-console.log(ary_filter);
+//reduce
+let price = [100,199,259,139];
+let total = price.reduce(function(a,b){
+    return a + b;
+})
+console.log(total);
