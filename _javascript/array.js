@@ -23,6 +23,15 @@ let a = ['Apple','Banana','Cat','Dog','Egg','Fork'];
     // console.log(a[data]);
 // }
 
-for(let data of a){
-    console.log(data);
-}
+// for(let data of a){
+//     console.log(data);
+// }
+
+//push(),pop()
+a.push('test');
+a.pop();
+
+//unshift(),shift()
+a.unshift('test2');
+a.shift();
+console.log(a);
