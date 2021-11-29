@@ -46,3 +46,19 @@ let result = score >= 60 ? '及格':'不及格';
 
 console.log(result);
 
+//switch
+let s = 10;
+switch(s){
+    case 0:
+        console.log(0);
+        break;
+    case 1:
+        console.log(1);
+        break;
+    case 2:
+        console.log(2);
+        break;
+    default:
+        console.log('default');
+}
+
