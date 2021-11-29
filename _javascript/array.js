@@ -34,4 +34,14 @@ a.pop();
 //unshift(),shift()
 a.unshift('test2');
 a.shift();
+
+//toString(),join() 陣列轉字串
+// let str = a.toString();
+let str = a.join(',');
+console.log(str);
+
+//split() 字串轉陣列
+let title = 'HELLO_JAVASCRIPT';
+let ary = title.split('_');
+console.log(ary);
 console.log(a);
