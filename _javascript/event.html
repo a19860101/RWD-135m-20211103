@@ -17,15 +17,22 @@
     </style>
 </head>
 <body>
-    <button onclick="changeColor()">click</button>
+    <button onclick="addColor()">Add</button>
+    <button onclick="removeColor()">Remove</button>
+    <button onclick="toggleColor()">Toggle</button>
     <div class="content">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus sunt consequatur porro iusto quasi ullam cupiditate tempore? Qui quos exercitationem doloribus pariatur dicta ex eligendi eum dolore, earum sunt consequatur!
     </div>
     <script>
-        // let btn = document.querySelector('button');
-        function changeColor(){
-            // document.querySelector('div').style.color = 'red';
-            document.querySelector('div').classList.add('active');
+        let content = document.querySelector('.content')
+        function addColor(){
+            content.classList.add('active');
+        }
+        function removeColor(){
+            content.classList.remove('active');
+        }
+        function toggleColor(){
+            content.classList.toggle('active');
         }
     </script>
 </body>
