@@ -21,3 +21,19 @@ console.log(c);
 const d = ()=>{
     return 100;
 }
+
+
+// function & arror function
+// this
+const obj = {
+    name:'john',
+    active: function(){
+        return this;
+    },
+    active2: () => {
+        return this;
+    },
+}
+
+console.log(obj.active());
+console.log(obj.active2());
