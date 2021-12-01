@@ -47,8 +47,22 @@ function square(x){
 //     return x;
 // }
 
-let total = (x,y) => {
-    return x*y;
-}
+// let total = (x,y) => {
+//     return x*y;
+// }
 
-console.log(total(10,5));
+// 只有一個參數時，小括號可省略
+// let total = x => {
+//     return x;
+// }
+
+// 動作只有return時，大括號與return可省略
+// let total = () => 100 ;
+
+// let total = function(x){
+//     return x;
+// }
+
+let total = x => x;
+
+console.log(total(100));
