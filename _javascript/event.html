@@ -20,6 +20,9 @@
     <button onclick="addColor()">Add</button>
     <button onclick="removeColor()">Remove</button>
     <button onclick="toggleColor()">Toggle</button>
+    <button class="add">Add</button>
+    <button class="remove">Remove</button>
+    <button class="toggle">Toggle</button>
     <div class="content">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus sunt consequatur porro iusto quasi ullam cupiditate tempore? Qui quos exercitationem doloribus pariatur dicta ex eligendi eum dolore, earum sunt consequatur!
     </div>
@@ -33,6 +36,17 @@
         }
         function toggleColor(){
             content.classList.toggle('active');
+        }
+        let add = document.querySelector('.add');
+        add.onclick = function(){
+            addColor();
+        }
+
+        document.querySelector('.remove').onclick = function(){
+            removeColor();
+        }
+        document.querySelector('.toggle').onclick = function(){
+            toggleColor();
         }
     </script>
 </body>
