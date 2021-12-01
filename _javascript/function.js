@@ -32,7 +32,23 @@ function square(x){
 //     return price * tax;
 // }
 
-let total = function(price,tax){
-    return price * tax;
+// let total = function(price,tax){
+//     return price * tax;
+// }
+// console.log(total(999,1.1));
+
+// arrow function 箭頭函式
+
+// let total = () => {
+//     return 100;
+// }
+
+// let total = (x) => {
+//     return x;
+// }
+
+let total = (x,y) => {
+    return x*y;
 }
-console.log(total(999,1.1));
+
+console.log(total(10,5));
