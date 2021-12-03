@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .modal-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            z-index: -1;
+            transition: .5s;
+        }
+        .modal-container {
+            background-color: #fff;
+            position: absolute;
+            padding: 30px;
+            border-radius: 5px;
+            max-width: 800px;
+            width: 60%;
+            left: 50%;
+            top: 15%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: -1;
+            transition: .5s;
+        }
+        .modal.active .modal-container {
+            z-index: 5;
+            opacity: 1;
+        }
+        .modal.active .modal-overlay {
+            z-index: 4;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" data-modal="#modal-1" class="modal-btn">
+        Modal 1
+    </a>
+    <a href="#" data-modal="#modal-2" class="modal-btn">
+        Modal 2
+    </a>
+    <div id="modal-1" class="modal">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>MODAL 1</h3>
+            </div>
+            <div class="modal-body">
+                <p>
+                    五年邀請編輯當中附近並且，練習並在以為傢伙新浪就是今後呵呵好好，解釋你想鏡頭大家都到達情況維修焦點，而且方向觀眾好處那些，前進申請方法某些編號飲食歌手導航市政府覺得，人力訪問一身貿易不足手上，引起從而等待一批引進，密碼整理一會兒獲得哈哈統計軍隊檢查保護見。
+                </p>
+                <p>
+                    新臺幣企業事件輕易水晶之間期間說法，集體依舊山西展開那麼鎖定是因為小心有意專家星座體內優化，機場感染模糊擁有所屬教育改革導致人間新聞寫作重要比例，填寫她說降價你不，身影暫時只好，提出電腦，或許監督腦袋玄幻協議我國高級男子大家都審核二手傢俱，資產落實他也每。
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">關閉</a>
+            </div>
+        </div>
+    </div>
+    <div id="modal-2" class="modal">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>MODAL 2</h3>
+            </div>
+            <div class="modal-body">
+                <p>
+                    正好專輯感興趣，競爭職位今天義務放下篇文章一些，好多技術心裡不但富岡協助要有笑容所屬釣魚一項經營自行，處罰我有電力文明福州美女令人說什麼類型本報返回規模，新型人群不是很走向，分公司停止搭配隱藏版轉帖不多會議蔬菜歐洲工廠醫療操作系統，基本上物品把他，講話可。
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">關閉</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let modalBtn = document.querySelectorAll('.modal-btn');
+        modalBtn.forEach(data=>{
+            data.onclick = e => {
+                let modal = e.target.dataset.modal;
+                document.querySelector(modal).classList.add('active');
+            }
+        })
+        document.onclick = e => {
+            // console.log(e.target.className);
+            if(e.target.className.indexOf('modal-close') > -1){
+               document.querySelectorAll('.modal').forEach(data=>{
+                   data.classList.remove('active');
+               })
+            }
+        }
+    </script>
+</body>
+</html>
