@@ -33,15 +33,17 @@
             transform: translateX(-50%);
             opacity: 0;
             z-index: -1;
-            transition: .5s;
+            transition: .5s .2s;
         }
         .modal.active .modal-container {
             z-index: 5;
             opacity: 1;
+            transition: .5s;
         }
         .modal.active .modal-overlay {
             z-index: 4;
             opacity: 1;
+            transition: .5s .2s;
         }
     </style>
 </head>
