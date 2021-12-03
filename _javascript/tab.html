@@ -70,12 +70,18 @@
             data.onclick = e => {
                 // let href = e.target.href;
                 let href = e.target.getAttribute('href');
-                let panel = e.target.dataset.panel
                 for(let tabLink of tabLinks){
                     tabLink.classList.remove('active');
                 }
                 // data.classList.add('active');
                 e.target.classList.add('active');
+                
+                let panel = e.target.dataset.panel
+                document.querySelectorAll('.tab-panel').forEach(data=>{
+                    data.classList.remove('active');
+                })
+                document.querySelector(panel).classList.add('active');
+
             }
         })
     </script>
