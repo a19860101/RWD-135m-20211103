@@ -39,6 +39,9 @@
     <a href="#" data-modal="#modal-1" class="modal-btn">
         Modal 1
     </a>
+    <a href="#" data-modal="#modal-2" class="modal-btn">
+        Modal 2
+    </a>
     <div id="modal-1" class="modal">
         <div class="modal-overlay"></div>
         <div class="modal-container">
@@ -58,5 +61,30 @@
             </div>
         </div>
     </div>
+    <div id="modal-2" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>MODAL 2</h3>
+            </div>
+            <div class="modal-body">
+                <p>
+                    正好專輯感興趣，競爭職位今天義務放下篇文章一些，好多技術心裡不但富岡協助要有笑容所屬釣魚一項經營自行，處罰我有電力文明福州美女令人說什麼類型本報返回規模，新型人群不是很走向，分公司停止搭配隱藏版轉帖不多會議蔬菜歐洲工廠醫療操作系統，基本上物品把他，講話可。
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">關閉</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let modalBtn = document.querySelectorAll('.modal-btn');
+        modalBtn.forEach(data=>{
+            data.onclick = e => {
+                let modal = e.target.dataset.modal;
+                document.querySelector(modal).classList.add('active');
+            }
+        })
+    </script>
 </body>
 </html>
