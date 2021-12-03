@@ -14,15 +14,19 @@
         .tab {
             width: 600px;
             margin: auto;
+            position: relative;
         }
         .tab-nav {
             background-color: #ccc;
             display: flex;
+            position: relative;
+            z-index: 10;
         }
         .tab-link {
             color: #000;
             text-decoration: none;
             padding: 8px 12px;
+            transition: .6s;
         }
         .tab-link.active {
             background-color: #c9ff8c;
@@ -35,6 +39,17 @@
         }
         .tab-panel.active {
             display: block;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px)
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
