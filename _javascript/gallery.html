@@ -37,9 +37,17 @@
     </div>
     <script>
         let galleryItems = document.querySelectorAll('.gallery-item');
-        galleryItems.forEach(function(data){
-            data.onclick = function(){
-                let newImg = this.getAttribute('src');
+        // galleryItems.forEach(function(data){
+        //     data.onclick = function(){
+        //         let newImg = this.getAttribute('src');
+        //         document.querySelector('.main').setAttribute('src',newImg);
+        //     }
+        // })
+
+        galleryItems.forEach(data => {
+            data.onclick = e => {
+                console.log(e.target);
+                let newImg = e.target.getAttribute('src');
                 document.querySelector('.main').setAttribute('src',newImg);
             }
         })

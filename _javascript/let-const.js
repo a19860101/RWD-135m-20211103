@@ -23,7 +23,7 @@ const d = ()=>{
 }
 
 
-// function & arror function
+// function & arrow function
 // this
 const obj = {
     name:'john',
