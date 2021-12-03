@@ -35,5 +35,14 @@
             <img src="images/iphone-13-starlight-select-2021.png" class="gallery-item">
         </div>
     </div>
+    <script>
+        let galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(function(data){
+            data.onclick = function(){
+                let newImg = this.getAttribute('src');
+                document.querySelector('.main').setAttribute('src',newImg);
+            }
+        })
+    </script>
 </body>
 </html>
