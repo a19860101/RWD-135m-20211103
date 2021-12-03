@@ -62,7 +62,7 @@
         </div>
     </div>
     <div id="modal-2" class="modal">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>MODAL 2</h3>
@@ -85,6 +85,14 @@
                 document.querySelector(modal).classList.add('active');
             }
         })
+        document.onclick = e => {
+            // console.log(e.target.className);
+            if(e.target.className.indexOf('modal-close') > -1){
+               document.querySelectorAll('.modal').forEach(data=>{
+                   data.classList.remove('active');
+               })
+            }
+        }
     </script>
 </body>
 </html>
