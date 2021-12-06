@@ -35,6 +35,8 @@
             padding:0 15px;
             height: 0;
             overflow: hidden;
+
+            transition: .5s;
         }
         /* .collapse-panel.active { */
 /*  */
@@ -69,7 +71,16 @@
                 // let href = e.target.getAttribute('href');
                 // let panel = document.querySelector(href);
                 let panel = e.target.nextElementSibling;
-                console.log(panel)
+
+                // console.log(panel.style.height);
+                if(panel.style.height){
+                    console.log('height 存在')
+                    panel.style.height = null;
+                }else{
+                    console.log('height 不存在')
+                    // console.log(panel.scrollHeight);
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
             }
         })
     </script>
