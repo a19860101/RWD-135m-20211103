@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="output">
+    </div>
     <script>
         const url = 'data.json';
         // fetch(url)
@@ -21,6 +23,11 @@
         .then(data => {
             console.log(data);
         })
+        let h1 = document.createElement('h1');
+        h1.append('hello javascript')
+        
+        document.querySelector('#output').innerHTML = '<h1>hello</h1>';
+        // document.querySelector('#output').append(h1);
     </script>
 </body>
 </html>
