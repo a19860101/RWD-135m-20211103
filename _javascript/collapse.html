@@ -30,31 +30,48 @@
             background-color: #ff6868;
         }
         .collapse-panel {
-            padding: 15px;
             background-color: #ddd;
+            
+            padding:0 15px;
+            height: 0;
+            overflow: hidden;
         }
+        /* .collapse-panel.active { */
+/*  */
+        /* } */
     </style>
 </head>
 <body>
     <div class="collapse">
-        <a href="#" class="collapse-link">link 1</a>
-        <div class="collapse-panel">
+        <a href="#panel-1" class="collapse-link">link 1</a>
+        <div class="collapse-panel" id="panel-1">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias omnis delectus quibusdam, minima ipsum quae fugit corrupti doloribus ad quas magni perspiciatis error, dolores dolorem blanditiis unde. Reiciendis, eum.
             </p>
         </div>
-        <a href="#" class="collapse-link">link 2</a>
-        <div class="collapse-panel">
+        <a href="#panel-2" class="collapse-link">link 2</a>
+        <div class="collapse-panel" id="panel-2">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium, quidem nobis maiores earum deleniti. Voluptas suscipit illum sint fugiat natus provident architecto explicabo, earum placeat. Cumque optio facilis labore recusandae delectus dolores eius quae provident praesentium. Atque eius facere velit, consectetur ea sint eaque omnis libero veniam minus nesciunt at inventore earum quisquam laborum cum iusto sunt natus nulla.
             </p>
         </div>
-        <a href="#" class="collapse-link">link 3</a>
-        <div class="collapse-panel">
+        <a href="#panel-3" class="collapse-link">link 3</a>
+        <div class="collapse-panel" id="panel-3">
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cum nisi iure dolorem quibusdam animi, enim fugit esse placeat quisquam tempore at atque quos omnis possimus. Incidunt odio ab sint reiciendis officia iste eos hic, labore obcaecati earum consequatur amet. Excepturi, similique vero! Nisi!
             </p>
         </div>
     </div>
+    <script>
+        let links = document.querySelectorAll('.collapse-link');
+        links.forEach(data => {
+            data.onclick = e => {
+                // let href = e.target.getAttribute('href');
+                // let panel = document.querySelector(href);
+                let panel = e.target.nextElementSibling;
+                console.log(panel)
+            }
+        })
+    </script>
 </body>
 </html>
