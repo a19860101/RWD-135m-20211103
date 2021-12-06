@@ -20,13 +20,19 @@
         // })
         fetch(url)
         .then(res=>res.json())
-        .then(data => {
-            console.log(data);
+        .then(datas => {
+            datas.forEach(data => {
+                let h3 = document.createElement('h3');
+                h3.append(data.name);
+                let price = document.createElement('div');
+                price.append(data.price);
+                document.querySelector('#output').append(h3,price);
+            })
         })
-        let h1 = document.createElement('h1');
-        h1.append('hello javascript')
+        // let h1 = document.createElement('h1');
+        // h1.append('hello javascript')
         
-        document.querySelector('#output').innerHTML = '<h1>hello</h1>';
+        // document.querySelector('#output').innerHTML = '<h1>hello</h1>';
         // document.querySelector('#output').append(h1);
     </script>
 </body>
