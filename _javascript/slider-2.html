@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .slider {
             width: 1000px;
@@ -16,22 +17,29 @@
             width: 100%;
         }
         .slider-wrapper {
-            transition: .6s;
+            transition: .6s ease-in-out;
         }
         .slider-item {
             float: left;
             width: 1000px;
             height: 500px;
         }
+        .slider-nav a {
+            color: rgba(255,255,255,.6);
+            transition: .5s;
+        }
+        .slider-nav a:hover {
+            color: #fff;
+        }
         .slider-prev-btn {
             position: absolute;
-            left: 0;
+            left: 15px;
             top: 50%;
             transform: translateY(-50%);
         }
         .slider-next-btn {
             position: absolute;
-            right: 0;
+            right: 15px;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -63,8 +71,8 @@
             </div>
         </div>
         <div class="slider-nav">
-            <a href="#" class="slider-prev-btn">previous</a>
-            <a href="#" class="slider-next-btn">next</a>
+            <a href="#" class="slider-prev-btn"><i class="fas fa-chevron-circle-left fa-lg"></i></a>
+            <a href="#" class="slider-next-btn"><i class="fas fa-chevron-circle-right fa-lg"></i></a>
         </div>
     </div>
     <script>
