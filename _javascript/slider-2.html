@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="slider">
-        <div class="wrapper">
+        <div class="slider-wrapper">
             <div class="slider-item active">
                 <img src="https://picsum.photos/id/23/1000/500" alt="">
             </div>
@@ -45,10 +45,20 @@
                 <img src="https://picsum.photos/id/29/1000/500" alt="">
             </div>
         </div>
-        <div class="slider-nav">
+        <!-- <div class="slider-nav">
             <a href="#" class="slider-prev-btn">previous</a>
             <a href="#" class="slider-next-btn">next</a>
-        </div>
+        </div> -->
     </div>
+    <script>
+        let currentIndex = 0;
+        let imgWidth = 1000;
+        let imgs =[...document.querySelectorAll('.slider-item')];
+        let total = imgs.length;
+        // console.log(total);
+
+        let width = imgWidth * total;
+        document.querySelector('.slider-wrapper').style.width = width + 'px';
+    </script>
 </body>
 </html>
