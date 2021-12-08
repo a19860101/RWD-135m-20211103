@@ -87,7 +87,7 @@
         }
 
 
-        function show(direction){
+        function show(direction = 'next'){
             // console.log(direction);
             if(direction === 'next'){
                 currentIndex += 1;
@@ -110,6 +110,7 @@
             // imgs[currentIndex].style.display = 'block';
             imgs[currentIndex].classList.add('active');
         }
+        setInterval(show,6000)
     </script>
 </body>
 </html>

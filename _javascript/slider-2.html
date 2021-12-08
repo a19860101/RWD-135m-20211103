@@ -94,7 +94,7 @@
         prev.onclick = ()=>{
             show('prev');
         }
-        function show(direction){
+        function show(direction = 'next'){
             if(direction === 'next'){
                 currentIndex += 1;
                 if(currentIndex === total){
@@ -110,6 +110,8 @@
             }
             wrapper.style.marginLeft = imgWidth * (-currentIndex) + 'px';
         }
+        //定時器
+        setInterval(show, 3000)
     </script>
 </body>
 </html>
