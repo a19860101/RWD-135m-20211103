@@ -13,6 +13,9 @@
         img {
             width: 100%;
         }
+        .slider-wrapper {
+            transition: .6s;
+        }
         .slider-item {
             float: left;
             width: 1000px;
@@ -45,10 +48,10 @@
                 <img src="https://picsum.photos/id/29/1000/500" alt="">
             </div>
         </div>
-        <!-- <div class="slider-nav">
+        <div class="slider-nav">
             <a href="#" class="slider-prev-btn">previous</a>
             <a href="#" class="slider-next-btn">next</a>
-        </div> -->
+        </div>
     </div>
     <script>
         let currentIndex = 0;
@@ -58,7 +61,26 @@
         // console.log(total);
 
         let width = imgWidth * total;
-        document.querySelector('.slider-wrapper').style.width = width + 'px';
+        let wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.width = width + 'px';
+
+        let next = document.querySelector('.slider-next-btn');
+        let prev = document.querySelector('.slider-prev-btn');
+        next.onclick = ()=>{
+            show('next');
+        }
+        prev.onclick = ()=>{
+            show('prev');
+        }
+        function show(direction){
+            if(direction === 'next'){
+                currentIndex += 1;
+                
+            }else{
+                currentIndex -= 1;
+            }
+            wrapper.style.marginLeft = imgWidth * (-currentIndex) + 'px';
+        }
     </script>
 </body>
 </html>
