@@ -10,7 +10,7 @@
             width: 1000px;
             margin: auto;
             overflow: hidden;
-
+            position: relative;
         }
         img {
             width: 100%;
@@ -23,13 +23,25 @@
             width: 1000px;
             height: 500px;
         }
+        .slider-prev-btn {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .slider-next-btn {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
     <div class="slider">
         <div class="slider-wrapper">
             <div class="slider-item active">
-                <img src="https://picsum.photos/id/23/1000/500" alt="">
+                <a href="#"><img src="https://picsum.photos/id/23/1000/500" alt=""></a>
             </div>
             <div class="slider-item">
                 <img src="https://picsum.photos/id/24/1000/500" alt="">
