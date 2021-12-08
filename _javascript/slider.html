@@ -51,10 +51,25 @@
         let currentIndex = 0;
 
         // console.log(imgs[currentIndex]);
-        function show(){
-            imgs[currentIndex].style.display = 'block';
+        next.onclick = () => {
+            show('next');
         }
-        show();
+        prev.onclick = () => {
+            show('prev');
+        }
+
+
+        function show(direction){
+            // imgs[currentIndex].style.display = 'block';
+            // console.log(direction);
+            if(direction === 'next'){
+                currentIndex += 1;
+                console.log(currentIndex);
+            }else {
+                currentIndex -= 1;
+                console.log(currentIndex);
+            }
+        }
     </script>
 </body>
 </html>
