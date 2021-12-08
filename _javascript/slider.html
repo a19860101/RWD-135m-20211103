@@ -15,6 +15,9 @@
             position: absolute;
             display: none;
         }
+        .slider-item.active {
+            display: block;
+        }
         .slider-nav {
             position: absolute;
             top: 500px;
@@ -23,7 +26,7 @@
 </head>
 <body>
     <div class="slider">
-        <div class="slider-item">
+        <div class="slider-item active">
             <img src="https://picsum.photos/id/23/1000/500" alt="">
         </div>
         <div class="slider-item">
@@ -37,6 +40,9 @@
         </div>
         <div class="slider-item">
             <img src="https://picsum.photos/id/27/1000/500" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/28/1000/500" alt="">
         </div>
         <div class="slider-nav">
             <a href="#" class="slider-prev-btn">previous</a>
@@ -60,15 +66,25 @@
 
 
         function show(direction){
-            // imgs[currentIndex].style.display = 'block';
             // console.log(direction);
             if(direction === 'next'){
                 currentIndex += 1;
-                console.log(currentIndex);
+                if(currentIndex === totalImgs){
+                    currentIndex = 0
+                }
             }else {
-                currentIndex -= 1;
-                console.log(currentIndex);
+                if(currentIndex === 0){
+                    currentIndex = totalImgs - 1;
+                }else{
+                    currentIndex -= 1;
+                }
             }
+            console.log(currentIndex);
+            for(let idx in imgs){
+                console.log(idx);
+                imgs[idx].style.display = 'none';
+            }
+            imgs[currentIndex].style.display = 'block';
         }
     </script>
 </body>
