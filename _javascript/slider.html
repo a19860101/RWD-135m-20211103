@@ -26,7 +26,7 @@
             opacity: 1;
         }
         .slider-nav a {
-            color: #fff;
+            color: #000;
 
         }
         .slider-prev-btn {
@@ -90,20 +90,27 @@
         function show(direction = 'next'){
             // console.log(direction);
             if(direction === 'next'){
-                currentIndex += 1;
-                if(currentIndex === totalImgs){
-                    currentIndex = 0
-                }
-            }else {
-                if(currentIndex === 0){
-                    currentIndex = totalImgs - 1;
-                }else{
-                    currentIndex -= 1;
-                }
+                // currentIndex += 1;
+                // if(currentIndex === totalImgs){
+                //     currentIndex = 0
+                // }
+                currentIndex = (currentIndex + 1) % totalImgs;
+            }else{
+                currentIndex = currentIndex == 0 ? totalImgs : currentIndex;
+                currentIndex = (currentIndex - 1) % totalImgs;
+                console.log(currentIndex)
             }
-            console.log(currentIndex);
+            // else 
+            // {
+            //     if(currentIndex === 0){
+            //         currentIndex = totalImgs - 1;
+            //     }else{
+            //         currentIndex -= 1;
+            //     }
+            // }
+            // console.log(currentIndex);
             for(let idx in imgs){
-                console.log(idx);
+                // console.log(idx);
                 // imgs[idx].style.display = 'none';
                 imgs[idx].classList.remove('active')
             }
