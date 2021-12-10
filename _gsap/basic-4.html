@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/EasePack.min.js"></script>
+
     <style>
         .box {
             width: 100px;
@@ -21,7 +23,7 @@
             x: 600,
             delay: .5,
             duration: 2,
-            ease:"elastic.inOut(1, 0.3)"
+            ease:"rough({ strength: 1.5, points: 100, template: none.out, taper: out, randomize: true, clamp: false })"
         })
         
     </script>
