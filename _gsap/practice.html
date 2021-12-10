@@ -33,10 +33,22 @@
             background-color: #4accff;
             transform-origin: left;
         }
+        .start {
+            font-size: 5rem;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            line-height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
-    <div class="overlay"></div>
+    <a href="#" class="start">start</a>
+    <div class="overlay">
+    </div>
     <div class="container">
         <div class="caption">
             <h2>HELLO GSAP</h2>
@@ -47,10 +59,14 @@
     </div>
     <script>
         gsap.defaults({duration: 1})
-        gsap.timeline()
+        let animation = gsap.timeline()
             .to('.overlay',{scaleX:0,delay:.5})
             .from('.caption *',{opacity:0,stagger:{amount:1}})
             .from('img',{opacity:0})
+        document.querySelector('.start').onclick = () => {
+            animation.restart();
+            console.log(animation);
+        }
     </script>
 </body>
 </html>
