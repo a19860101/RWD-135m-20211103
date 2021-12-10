@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+</head>
+<body>
+    <h1>HELLO GSAP</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis eveniet excepturi consequuntur, pariatur alias atque laboriosam architecto in unde eaque repellendus nemo dolorem minus beatae itaque quae illo ullam!
+    </p>
+    <img src="https://picsum.photos/id/43/600/300" alt="">
+    <script>
+        let tl = gsap.timeline()
+        tl.from('h1',{opacity:0,duration:1})
+          .from('p',{opacity:0,duration:1})
+          .from('img',{opacity:0,duration:1})
+    </script>
+</body>
+</html>
