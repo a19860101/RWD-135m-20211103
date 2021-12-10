@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -30,6 +31,7 @@
             width: 100%;
             height: 100%;
             background-color: #4accff;
+            transform-origin: left;
         }
     </style>
 </head>
@@ -43,6 +45,12 @@
         </div>
         <img src="https://picsum.photos/id/45/600" alt="">
     </div>
-
+    <script>
+        gsap.defaults({duration: 1})
+        gsap.timeline()
+            .to('.overlay',{scaleX:0,delay:.5})
+            .from('.caption *',{opacity:0,stagger:{amount:1}})
+            .from('img',{opacity:0})
+    </script>
 </body>
 </html>
