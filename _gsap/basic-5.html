@@ -10,23 +10,39 @@
 
     <style>
         .box {
-            width: 100px;
-            height: 100px;
+            width: 50px;
+            height: 50px;
             background-color: #098;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
     <script>
         gsap.to('.box',{
-            x: 600,
-            delay: .5,
+            x:300,
+            rotate:360,
+            ease: 'power3',
             duration: 2,
-            ease:"rough({ strength: 1.5, points: 100, template: none.out, taper: out, randomize: true, clamp: false })"
+            delay: .5,
+            // stagger: .1
+            stagger:{
+                each:.5,
+                // amount: 3
+                from:"start"
+                //start, end, center, edges, random
+            }
         })
-        // ease的rough沒有包含在gsap core內，需另外套用 EasePack
-        
     </script>
 </body>
 </html>
