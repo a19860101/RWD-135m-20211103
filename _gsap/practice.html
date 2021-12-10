@@ -63,9 +63,10 @@
             .to('.overlay',{scaleX:0,delay:.5})
             .from('.caption *',{opacity:0,stagger:{amount:1}})
             .from('img',{opacity:0})
+        animation.pause();
         document.querySelector('.start').onclick = () => {
+            document.querySelector('.start').style.display = 'none';
             animation.restart();
-            console.log(animation);
         }
     </script>
 </body>
