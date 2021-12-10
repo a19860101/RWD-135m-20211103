@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <style>
         .box {
             width: 100px;
@@ -12,20 +13,15 @@
             background-color: #098;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 </head>
 <body>
     <div class="box"></div>
     <script>
-        gsap.to('.box',{
-            x: 600,
-            y: 600,
-            scale: 2,
-            rotate: 360,
-            backgroundColor:'red',
-            opacity:0,
-            duration: 10
-        });
+        gsap.from('.box',{
+            opacity: 0,
+            rotate:180,
+            duration: 1
+        })
     </script>
 </body>
 </html>
