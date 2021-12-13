@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         * {
@@ -19,11 +20,14 @@
         }
         .collapse-link {
             background-color: #e5ff70;
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             text-decoration: none;
             color: #000;
             padding: 15px;
             border-bottom: 1px solid #70794a;
+            transition: .5s;
         }
         .collapse-link:hover {
             background-color: #ff6868;
@@ -36,26 +40,30 @@
             background-color: #ddd;
             padding:15px;
             display: none;
-
         }
-       
+        .collapse-link i {
+            transition: .3s;
+        }
+        .collapse-link.active i {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
     <div class="collapse">
-        <a href="#panel-1" class="collapse-link">link 1</a>
+        <a href="#panel-1" class="collapse-link">link 1<i class="fas fa-chevron-down fa-lg"></i></a>
         <div class="collapse-panel" id="panel-1">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias omnis delectus quibusdam, minima ipsum quae fugit corrupti doloribus ad quas magni perspiciatis error, dolores dolorem blanditiis unde. Reiciendis, eum.
             </p>
         </div>
-        <a href="#panel-2" class="collapse-link">link 2</a>
+        <a href="#panel-2" class="collapse-link">link 2<i class="fas fa-chevron-down fa-lg"></i></a>
         <div class="collapse-panel" id="panel-2">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium, quidem nobis maiores earum deleniti. Voluptas suscipit illum sint fugiat natus provident architecto explicabo, earum placeat. Cumque optio facilis labore recusandae delectus dolores eius quae provident praesentium. Atque eius facere velit, consectetur ea sint eaque omnis libero veniam minus nesciunt at inventore earum quisquam laborum cum iusto sunt natus nulla.
             </p>
         </div>
-        <a href="#panel-3" class="collapse-link">link 3</a>
+        <a href="#panel-3" class="collapse-link">link 3<i class="fas fa-chevron-down fa-lg"></i></a>
         <div class="collapse-panel" id="panel-3">
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cum nisi iure dolorem quibusdam animi, enim fugit esse placeat quisquam tempore at atque quos omnis possimus. Incidunt odio ab sint reiciendis officia iste eos hic, labore obcaecati earum consequatur amet. Excepturi, similique vero! Nisi!
@@ -68,6 +76,7 @@
                 // $(this).next().toggle(600);
                 // $(this).next().fadeToggle(1500);
                 $(this).next().slideToggle();
+                $(this).toggleClass('active');
             })
         })
     </script>
