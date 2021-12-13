@@ -84,18 +84,23 @@
     <a href="#" class="gotop"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
     <script>
         $(function(){
-            $('nav a').click(function(){
+            $('nav a').click(function(e){
+                e.preventDefault();
                 let target = $(this).data('target');
                 let distance = $(target).offset().top;
                 console.log(distance);
                 $('html,body').animate({
                     scrollTop: distance
                 })
+                // return false;
             })
-            $('.gotop').click(function(){
+
+            $('.gotop').click(function(e){
+                e.preventDefault();
                 $('html,body').animate({
                     scrollTop: 0
                 })
+                // return false;
             })
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
