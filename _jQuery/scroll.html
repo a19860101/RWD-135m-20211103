@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         * {
@@ -47,6 +48,13 @@
         #contact {
             background-color: #296a7a;
         }
+        .gotop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -68,6 +76,7 @@
     <section id="contact">
         <h2>Contact</h2>
     </section>
+    <a href="#" class="gotop"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
     <script>
         $(function(){
             $('nav a').click(function(){
@@ -76,6 +85,11 @@
                 console.log(distance);
                 $('html,body').animate({
                     scrollTop: distance
+                })
+            })
+            $('.gotop').click(function(){
+                $('html,body').animate({
+                    scrollTop: 0
                 })
             })
         })
