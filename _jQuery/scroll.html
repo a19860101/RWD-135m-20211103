@@ -98,8 +98,8 @@
                     scrollTop: distance
                 })
                 // return false;
-                $('nav a').removeClass('active');
-                $(this).addClass('active');
+                // $('nav a').removeClass('active');
+                // $(this).addClass('active');
             })
 
             $('.gotop').click(function(e){
@@ -116,6 +116,15 @@
                 }else{
                     $('.gotop').fadeOut();
                 }
+                $('nav a').each(function(){
+                    let target = $(this).data('target');
+                    let distance = $(target).offset().top;
+                    // console.log(distance);
+                    if(h >= distance - 200){
+                        $('nav a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
             })
         })
     </script>
