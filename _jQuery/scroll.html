@@ -45,16 +45,16 @@
             background-color: #9afd7b;
         }
         #contact {
-            background-color: #75e3ff;
+            background-color: #296a7a;
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#" data-target="about">About</a>
-        <a href="#" data-target="service">Service</a>
-        <a href="#" data-target="product">Product</a>
-        <a href="#" data-target="contact">Contact</a>
+        <a href="#" data-target="#about">About</a>
+        <a href="#" data-target="#service">Service</a>
+        <a href="#" data-target="#product">Product</a>
+        <a href="#" data-target="#contact">Contact</a>
     </nav>
     <section id="about">
         <h2>About</h2>
@@ -68,5 +68,13 @@
     <section id="contact">
         <h2>Contact</h2>
     </section>
+    <script>
+        $(function(){
+            $('nav a').click(function(){
+                let target = $(this).data('target');
+                console.log(target);
+            })
+        })
+    </script>
 </body>
 </html>
