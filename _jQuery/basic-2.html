@@ -18,7 +18,9 @@
     </style>
 </head>
 <body>
-    <button class="add">click</button>
+    <button class="add">Add</button>
+    <button class="remove">Remove</button>
+    <button class="toggle">Toggle</button>
     <div class="content">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo mollitia libero minus quisquam sapiente laboriosam quidem assumenda! Eius maxime debitis nihil aut explicabo quidem sit, provident, minima ducimus soluta libero.
     </div>
@@ -27,6 +29,12 @@
             $('.add').click(function(){
                 $('.content').addClass('active');
             });
+            $('.remove').click(function(){
+                $('.content').removeClass('active');
+            })
+            $('.toggle').click(function(){
+                $('.content').toggleClass('active')
+            })
         })
     </script>
 </body>
