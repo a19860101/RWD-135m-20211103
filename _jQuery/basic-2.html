@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .content {
+            transition: .5s;
+        }
+        .content.active {
+            background-color: #fff891;
+            color: #006c97;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button class="add">click</button>
+    <div class="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo mollitia libero minus quisquam sapiente laboriosam quidem assumenda! Eius maxime debitis nihil aut explicabo quidem sit, provident, minima ducimus soluta libero.
+    </div>
+    <script>
+        $(function(){
+            $('.add').click(function(){
+                $('.content').addClass('active');
+            });
+        })
+    </script>
+</body>
+</html>
