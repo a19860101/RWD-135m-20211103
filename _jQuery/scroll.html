@@ -72,7 +72,11 @@
         $(function(){
             $('nav a').click(function(){
                 let target = $(this).data('target');
-                console.log(target);
+                let distance = $(target).offset().top;
+                console.log(distance);
+                $('html,body').animate({
+                    scrollTop: distance
+                })
             })
         })
     </script>
