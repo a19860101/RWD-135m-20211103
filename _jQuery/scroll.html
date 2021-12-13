@@ -18,8 +18,8 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            background-color: #222;
-
+            background-color: rgba(0,0,0,.7);
+            backdrop-filter: blur(5px);
             position: fixed;
             top: 0;
 
@@ -27,8 +27,11 @@
         nav a {
             text-decoration: none;
             color: #eee;
-            padding: 15px 20px;
+            padding: 20px;
             transition: .4s;
+        }
+        nav.active a{
+            padding: 10px 20px;
         }
         nav a.active {
             background-color: #ffcd42;
@@ -113,8 +116,10 @@
                 let h = $(window).scrollTop();
                 if(h > 600){
                     $('.gotop').fadeIn();
+                    $('nav').addClass('active');
                 }else{
                     $('.gotop').fadeOut();
+                    $('nav').removeClass('active');
                 }
                 $('nav a').each(function(){
                     let target = $(this).data('target');
