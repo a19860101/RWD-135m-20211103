@@ -28,6 +28,11 @@
             text-decoration: none;
             color: #eee;
             padding: 15px 20px;
+            transition: .4s;
+        }
+        nav a.active {
+            background-color: #ffcd42;
+            color: #222;
         }
         section {
             width: 100%;
@@ -64,7 +69,7 @@
 </head>
 <body>
     <nav>
-        <a href="#" data-target="#about">About</a>
+        <a href="#" class="active" data-target="#about">About</a>
         <a href="#" data-target="#service">Service</a>
         <a href="#" data-target="#product">Product</a>
         <a href="#" data-target="#contact">Contact</a>
@@ -88,11 +93,13 @@
                 e.preventDefault();
                 let target = $(this).data('target');
                 let distance = $(target).offset().top;
-                console.log(distance);
+                // console.log(distance);
                 $('html,body').animate({
                     scrollTop: distance
                 })
                 // return false;
+                $('nav a').removeClass('active');
+                $(this).addClass('active');
             })
 
             $('.gotop').click(function(e){
