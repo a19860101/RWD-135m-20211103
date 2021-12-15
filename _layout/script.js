@@ -39,5 +39,21 @@ $(function(){
         }else{
             $('.gotop').fadeOut();
         }
+        $('.nav-menu').find('a').each(function(){
+            let href = $(this).attr('href');
+            if(href === '#'){
+                return;
+            }
+            let distance = $(href).offset().top;
+
+            if(h > distance - 200){
+                $('.nav-menu').find('a').removeClass('active');
+                $(this).addClass('active');
+            }
+            if(h < 600){
+                $('.nav-menu').find('a').removeClass('active');
+                $('.nav-menu').find('a').eq(0).addClass('active');
+            }
+        })
     })
 })
