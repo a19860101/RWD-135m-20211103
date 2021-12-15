@@ -16,7 +16,8 @@
             url: url,
             dataType:'json',
             success:function(res){
-                const county = res.records.map(data=>data.County);
+                const counties = res.records.map(data=>data.County);
+                const county = [...new Set(counties)];
                 county.forEach(data => {
                     $('#county').append(`<option value="${data}">${data}</option>`)
                 })
