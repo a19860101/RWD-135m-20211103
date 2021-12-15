@@ -17,16 +17,27 @@ $(function(){
             $('html,body').animate({
                 scrollTop: 0
             })
-            return 
+            return false; 
         }
         let distance = $(href).offset().top;
         $('html,body').animate({
             scrollTop: distance
         })
+        return false;
     })
     $('.gotop').click(function(){
         $('html,body').animate({
             scrollTop:0
         })
+        return false;
+    })
+    $('.gotop').hide();
+    $(window).scroll(function(){
+        let h = $(window).scrollTop();
+        if( h > 600){
+            $('.gotop').fadeIn();
+        }else{
+            $('.gotop').fadeOut();
+        }
     })
 })

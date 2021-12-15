@@ -348,6 +348,10 @@ footer a {
         color: #222;
         background-color: #fa0;
     }
+    .nav-menu a.active {
+        color: #222;
+        background-color: #fa0;
+    }
     nav li {
         margin: 0 5px;
     }
