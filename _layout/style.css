@@ -56,6 +56,9 @@ nav li {
     .nav-toggle {
         display: none;
     }
+    .nav-menu {
+        display: block;
+    }
 }
 /* header */
 
