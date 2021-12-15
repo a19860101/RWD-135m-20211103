@@ -19,6 +19,7 @@ nav {
 }
 .nav-menu {
     width: 100%;
+    display: none;
 }
 nav ul {
     list-style: none;
@@ -42,6 +43,19 @@ nav a {
 } */
 nav li {
     /* margin: 0 5px; */
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    display: inline-block;
+}
+@media(min-width:1200px){
+    .nav-toggle {
+        display: none;
+    }
 }
 /* header */
 
