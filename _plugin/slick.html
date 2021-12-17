@@ -10,14 +10,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <style>
+        body {
+            background-color: #ff3f69;
+        }
         #slider {
-            margin: auto;
+            margin:50px auto;
             width: 1200px;
         }
         img {
             width: 100%;
         }
+        .products {
+            width: 1200px;
+            margin:50px auto;  
+        }
+        .product-item {
+            padding: 15px;
+        }
     </style>
+        <script>
+            $(function(){
+                $('#slider').slick({
+                    autoplay: true,
+                    dots: true,
+                    arrows: true
+                });
+                $('.products').slick({
+                    slidesToShow: 6
+                })
+            })
+        </script>
 </head>
 <body>
     <div id="slider">
@@ -37,12 +59,50 @@
             <img src="https://picsum.photos/id/56/1200/600" alt="">
         </div>
     </div>
-    <script>
-        $(function(){
-            $('#slider').slick({
-                autoplay: true
-            });
-        })
-    </script>
+    <div class="products">
+        <div class="product-item">
+            <img src="https://picsum.photos/id/7/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/17/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/27/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/37/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/47/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/57/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/67/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/77/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/87/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/98/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/107/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/117/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/127/400" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/137/400" alt="">
+        </div>
+    </div>
+
 </body>
 </html>
