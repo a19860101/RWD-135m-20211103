@@ -25,6 +25,7 @@
                 })
                 let city;
                 $('#county').change(function(){
+                    $('.container').empty();
                     city = $(this).val();
                     console.log(city);
                     let result = res.records.filter(data=>data.County === city).forEach(data=>{
@@ -40,6 +41,7 @@
                             <hr>
                         </div>
                         `;
+                        
                         $('.container').append(content);
                     })
                 })
