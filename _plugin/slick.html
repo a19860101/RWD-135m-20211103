@@ -33,10 +33,14 @@
                 $('#slider').slick({
                     autoplay: true,
                     dots: true,
-                    arrows: true
+                    arrows: true,
+                    centerMode: true,
+                    centerPadding: '150px'
                 });
                 $('.products').slick({
-                    slidesToShow: 6
+                    slidesToShow: 5,
+                    slidesToScroll: 4,
+                    dots: true,
                 })
             })
         </script>
