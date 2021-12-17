@@ -25,11 +25,9 @@
                 })
                 let city;
                 $('#county').change(function(){
-                        city = $(this).val();
-                        console.log(city);
-                })
-                console.log(county);
-                res.records.forEach(data => {
+                    city = $(this).val();
+                    console.log(city);
+                    let result = res.records.filter(data=>data.County === city).forEach(data=>{
                     let content = `
                         <div>
                             <div>${data.County} -- ${data.SiteName}</div>
@@ -41,9 +39,25 @@
                             <div>PM2.5 懸浮微粒 ${data['PM2.5']}</div>
                             <hr>
                         </div>
-                    `;
-                    $('.container').append(content);
+                        `;
+                        $('.container').append(content);
+                    })
                 })
+                // res.records.forEach(data => {
+                //     let content = `
+                //         <div>
+                //             <div>${data.County} -- ${data.SiteName}</div>
+                //             <div>CO 一氧化碳 ${data.CO}</div>
+                //             <div>NO 一氧化氮 ${data.NO}</div>
+                //             <div>NO2 二氧化氮 ${data.NO2}</div>
+                //             <div>O3 臭氧 ${data.O3}</div>
+                //             <div>SO2 二氧化硫 ${data.SO2}</div>
+                //             <div>PM2.5 懸浮微粒 ${data['PM2.5']}</div>
+                //             <hr>
+                //         </div>
+                //     `;
+                //     $('.container').append(content);
+                // })
                 
             },
             error:function(){
