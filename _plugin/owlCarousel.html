@@ -9,9 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(function(){
+            $('#slider').owlCarousel({
+                items: 1
+            });
+            $('.products').owlCarousel({
+                items: 6
+            });
+        })
+    </script>
+    <style>
+        #slider, .products {
+            max-width: 1200px;
+            width: 90%;
+            margin:50px auto;
+        }
+    </style>
 </head>
 <body>
-    <div id="slider">
+    <div id="slider" class="owl-carousel owl-theme">
         <div class="slider-item">
             <img src="https://picsum.photos/id/46/1200/600" alt="">
         </div>
@@ -28,7 +45,7 @@
             <img src="https://picsum.photos/id/56/1200/600" alt="">
         </div>
     </div>
-    <div class="products">
+    <div class="products owl-carousel owl-theme">
         <div class="product-item">
             <img src="https://picsum.photos/id/7/400" alt="">
         </div>
