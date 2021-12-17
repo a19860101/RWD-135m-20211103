@@ -12,7 +12,15 @@
     <script>
         $(function(){
             $('#slider').owlCarousel({
-                items: 1
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplaySpeed: 800,
+                autoplayTimeout: 4000 ,
+                dots: true,
+                dotsSpeed: 800,
+                nav: true,
+                navSpeed: 800
             });
             $('.products').owlCarousel({
                 items: 6
