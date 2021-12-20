@@ -19,8 +19,16 @@
                 dataType: 'json',
                 success:function(res){
                     console.log(res);
+
                     res.forEach(data => {
-                        $('.container').append(data.author);
+                        let content = `
+                            <div class="box">
+                                <a href="${data.download_url}">
+                                    <img src="${data.download_url}">
+                                </a>
+                            </div>
+                        `;
+                        $('.container').append(content);
                     })
                 }
             })
