@@ -18,13 +18,20 @@
             background: initial;
             color: #e04;
         }
+        #slider .owl-item {
+            opacity: .3;
+            transition: .6s;
+        }
+        #slider .owl-item.active {
+            opacity: 1;
+        }
     </style>
     <script>
         $(function(){
             $('#slider').owlCarousel({
                 items: 1,
                 loop: true,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 800,
                 autoplayTimeout: 4000 ,
                 dots: true,
