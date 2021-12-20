@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <style>
+        .container {
+            margin: auto;
+        }
+        .box {
+            width: 300px;
+            margin: 5px;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.container').imagesLoaded(function(){
+                $('.container').masonry({
+                    isFitWidth: true
+                });
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="https://picsum.photos/id/54/400/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/24/1300/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/14/600/1000" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/34/600/1200" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/44/400/800" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/64/800/1200" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/74/700/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/84/800/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/94/400/500" alt="">
+        </div>
+    </div>
+</body>
+</html>
