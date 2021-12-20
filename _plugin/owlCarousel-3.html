@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <style>
+        .owl-theme .owl-nav [class*=owl-]{
+            transition: .4s;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: initial;
+            color: #e04;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('#slider').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: false,
+                autoplaySpeed: 800,
+                autoplayTimeout: 4000 ,
+                dots: true,
+                dotsSpeed: 800,
+                nav: true,
+                navSpeed: 800,
+                navText:['<i class="fas fa-chevron-circle-left fa-lg"></i>','<i class="fas fa-chevron-circle-right fa-lg"></i>']
+            });
+        })
+    </script>
+    <style>
+        * {
+            font-family: 'Segoe UI';
+        }
+        #slider, .products {
+            max-width: 1200px;
+            width: 90%;
+            margin:50px auto;
+        }
+        .slider-item {
+            position: relative;
+        }
+        .slider-content {
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30%;
+            padding: 30px;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div id="slider" class="owl-carousel owl-theme">
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/46/1200/600" alt="">
+            <div class="slider-content">
+                <h3>slider 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eos vel consequatur quia suscipit nostrum laborum mollitia eligendi incidunt repellat.</p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/16/1200/600" alt="">
+            <div class="slider-content">
+                <h3>slider 2</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur hic voluptatem, doloremque sapiente labore corporis.
+                </p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/26/1200/600" alt="">
+            <div class="slider-content">
+                <h3>slider 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dolorem? Cumque, fugiat ducimus labore eligendi totam mollitia incidunt praesentium voluptatem fugit eaque?
+                </p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/36/1200/600" alt="">
+            <div class="slider-content">
+                <h3>slider 4</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sit repellat minus nobis soluta laudantium beatae libero eaque quam commodi!
+                </p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/56/1200/600" alt="">
+            <div class="slider-content">
+                <h3>slider 5</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate voluptates dolorum magnam reprehenderit temporibus? Rerum optio consequuntur accusantium commodi soluta.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
