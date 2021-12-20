@@ -53,10 +53,17 @@
             position: absolute;
             right: 30px;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%)translateX(100%);
             width: 30%;
             padding: 30px;
             backdrop-filter: blur(5px);
+
+            opacity: 0;
+            transition: .8s .8s;
+        }
+        .owl-item.active .slider-content {
+            opacity: 1;
+            transform: translateY(-50%)translateX(0%);
         }
     </style>
 </head>
