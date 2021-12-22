@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" v-model="name">
+            {{name}}
+            <div>
+                <input type="radio" name="gender" value="男" v-model="gender">
+                <label for="">男</label>
+                <input type="radio" name="gender" value="女" v-model="gender">
+                <label for="">女</label>
+            </div>
+            <h1>{{gender}}</h1>
+            <div>
+                <input type="checkbox" name="skill" value="平面設計" v-model="skill">
+                <label for="">平面設計</label>
+                <input type="checkbox" name="skill" value="網頁設計" v-model="skill">
+                <label for="">網頁設計</label>
+                <input type="checkbox" name="skill" value="影視剪輯" v-model="skill">
+                <label for="">影視剪輯</label>
+            </div>
+            <div>
+                <h1 v-for="s in skill">{{s}}</h1>
+            </div>
+        </form>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    name: 'John',
+                    gender: '',
+                    skill: [],
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
