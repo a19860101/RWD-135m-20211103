@@ -16,14 +16,36 @@
         <div v-if="qty > 5">庫存充足</div>
         <div v-else-if="qty > 0">低庫存</div>
         <div v-else>補貨中</div>
+        <div v-for="drink in drinks">
+            {{drink.name}}:NT${{drink.price}}
+        </div>
     </div>
     <script>
+        let drinks = [
+            {
+                name:'紅茶',
+                price: 30
+            },
+            {
+                name:'綠茶',
+                price: 30
+            },
+            {
+                name:'奶茶',
+                price:35
+            },
+            {
+                name:'珍珠奶茶',
+                price: 50
+            }
+        ];
         Vue.createApp({
             data(){
                 return {
                     title: 'Hello Vue',
                     description: 'lorem ipsum',
-                    qty: 6
+                    qty: 6,
+                    drinks: drinks
                 }
             }
         }).mount('#app')
