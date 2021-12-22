@@ -11,6 +11,7 @@
 <body>
     <div id="app">
         <h1>{{title}}</h1>
+        <!-- <img :src="variables[currentIndex].img" alt=""> -->
         <img :src="img" alt="">
         <div>
             {{desc}}
@@ -20,7 +21,6 @@
                 :src="v.img" 
                 v-for="(v,idx) in variables" 
                 width="100" 
-                :title="idx"
                 @click="changeIndex(idx)"
             >
         </div>
@@ -30,7 +30,6 @@
             data(){
                 return {
                     title: 'iPhone13',
-                    img: 'images/iphone-13-blue-select-2021.png',
                     desc: '以 iPhone 8 或後續機型換購，獲享最高達 NT$3,000 - NT$23,500 折抵優惠**' ,
                     currentIndex: 0,
                     variables:[
@@ -69,7 +68,13 @@
             },
             methods:{
                 changeIndex(idx){
-                    console.log(idx);
+                    this.currentIndex = idx;
+                    console.log(this.currentIndex)
+                }
+            },
+            computed:{
+                img(){
+                    return this.variables[this.currentIndex].img
                 }
             }
         }).mount('#app');
