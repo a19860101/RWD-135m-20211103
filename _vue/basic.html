@@ -19,6 +19,8 @@
         <div v-for="drink in drinks">
             {{drink.name}}:NT${{drink.price}}
         </div>
+        <a v-bind:href="link" target="_blank">YAHOO</a>
+        <a :href="link" target="_blank">YAHOO</a>
     </div>
     <script>
         let drinks = [
@@ -45,7 +47,8 @@
                     title: 'Hello Vue',
                     description: 'lorem ipsum',
                     qty: 6,
-                    drinks: drinks
+                    drinks: drinks,
+                    link: 'https://tw.yahoo.com'
                 }
             }
         }).mount('#app')
