@@ -16,7 +16,13 @@
             {{desc}}
         </div>
         <div>
-            <img :src="v.img" v-for="v in variables" width="100">
+            <img 
+                :src="v.img" 
+                v-for="(v,idx) in variables" 
+                width="100" 
+                :title="idx"
+                @click="changeIndex(idx)"
+            >
         </div>
     </div>
     <script>
@@ -26,6 +32,7 @@
                     title: 'iPhone13',
                     img: 'images/iphone-13-blue-select-2021.png',
                     desc: '以 iPhone 8 或後續機型換購，獲享最高達 NT$3,000 - NT$23,500 折抵優惠**' ,
+                    currentIndex: 0,
                     variables:[
                         {
                             color:'藍色',
@@ -58,6 +65,11 @@
                             img: 'images/iphone-13-starlight-select-2021.png'
                         },
                     ]
+                }
+            },
+            methods:{
+                changeIndex(idx){
+                    console.log(idx);
                 }
             }
         }).mount('#app');
