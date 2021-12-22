@@ -10,11 +10,16 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{title}}</h1>
+        <h1>{{title}} {{color}}</h1>
         <!-- <img :src="variables[currentIndex].img" alt=""> -->
         <img :src="img" alt="">
         <div>
             {{desc}}
+        </div>
+        <div>
+            <div v-if="qty > 10">庫存充足</div>
+            <div v-else-if="qty > 0">低庫存</div>
+            <div v-else>補貨中</div>
         </div>
         <div>
             <img 
@@ -73,8 +78,17 @@
                 }
             },
             computed:{
+                currentIdx(){
+                    return this.variables[this.currentIndex];
+                },
                 img(){
-                    return this.variables[this.currentIndex].img
+                    return this.currentIdx.img;
+                },
+                color(){
+                    return this.currentIdx.color;
+                },
+                qty(){
+                    return this.currentIdx.qty;
                 }
             }
         }).mount('#app');
