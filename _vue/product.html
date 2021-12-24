@@ -29,6 +29,11 @@
                 @click="changeIndex(idx)"
             >
         </div>
+        <button v-if="qty > 0" @click="cart++">加入購物車</button>
+        <button v-else disabled>補貨中</button>
+        <div>
+            購物車:{{cart}}
+        </div>
     </div>
     <script>
         Vue.createApp({
@@ -37,6 +42,7 @@
                     title: 'iPhone13',
                     desc: '以 iPhone 8 或後續機型換購，獲享最高達 NT$3,000 - NT$23,500 折抵優惠**' ,
                     currentIndex: 0,
+                    cart:0,
                     variables:[
                         {
                             color:'藍色',
