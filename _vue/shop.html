@@ -65,14 +65,15 @@
             <div class="offcanvas-body">
                 <div>商品數量:{{cartNumber}}</div>
                 <div v-if="cartNumber == 0">目前沒有商品，快點去購物吧!</div>
-                <div v-for="item in cartItems" class="d-flex align-items-center justify-content-between">
+                <div v-for="(item,idx) in cartItems" class="d-flex align-items-center justify-content-between">
                     <img :src="item.img" alt="" width="100">
                     <div class="me-auto">
                         {{item.title}} {{item.color}}<br> {{item.size}}<br>NT.{{item.price}}
                     </div>
-                    <button class="btn btn-danger btn-sm">移除</button>
+                    <button class="btn btn-danger btn-sm" @click="removeItem(idx)">移除</button>
                 </div>
-                    <button v-if="cartNumber > 0" class="btn btn-outline-danger" @click="clearCart()">清空購物車</button>
+                <div>小計:{{total}}</div>
+                <button v-if="cartNumber > 0" class="btn btn-outline-danger" @click="clearCart()">清空購物車</button>
             </div>
         </div>
         <div class="container">
@@ -242,12 +243,30 @@
                     if(confirm('確認清空購物車嗎？')){
                         this.cartItems.length = 0;
                     }
+                },
+                removeItem(idx){
+                    if(confirm('確認刪除？')){
+                        this.cartItems.splice(idx,1);
+                    }
                 }
             },
             computed:{
                 cartNumber(){
                     return this.cartItems.length;
                 },
+                total(){
+                    // let price = this.cartItems.map(data => data.price);
+                    // if(price.length > 0){
+                    //     return price.reduce((a,b)=>a+b);
+                    // }else{
+                    //     return 0;
+                    // }
+                    if(this.cartNumber > 0){
+                        return this.cartItems.map(data=>data.price).reduce((a,b)=>a+b);
+                    }else{
+                        return 0;
+                    }
+                }
             }
         }).mount('#app')
     </script>
