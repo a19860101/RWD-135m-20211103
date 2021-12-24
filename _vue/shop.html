@@ -230,7 +230,9 @@
                     this.cartItems.push(this.products[idx]);
                 },
                 clearCart(){
-                    this.cartItems.length = 0;
+                    if(confirm('確認清空購物車嗎？')){
+                        this.cartItems.length = 0;
+                    }
                 }
             },
             computed:{
