@@ -40,14 +40,15 @@
             </div>
         </nav>
         <div class="container">
+            {{cartItems}}
             <div class="row g-5">
-                <div class="col-xl-3 col-sm-4 col-6" v-for="product in products">
+                <div class="col-xl-3 col-md-4 col-6" v-for="(product,idx) in products">
                     <div class="border">
                         <img :src="product.img" alt="" class="w-100">
                         <div class="p-3">
                             <h4>{{product.title}} {{product.color}}<br> {{product.size}}</h4>
                             <div>NT {{product.price}}</div>
-                            <button class="btn btn-primary">加入購物車</button>
+                            <button class="btn btn-primary" @click="addToCart(idx)">加入購物車</button>
                         </div>
                     </div>
                 </div>
@@ -196,6 +197,11 @@
                             price: 36400
                         },
                     ]
+                }
+            },
+            methods:{
+                addToCart(idx){
+                    this.cartItems.push(this.products[idx]);
                 }
             }
         }).mount('#app')
