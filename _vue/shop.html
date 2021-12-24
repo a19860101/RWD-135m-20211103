@@ -54,7 +54,12 @@
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                {{cartItems}}
+                <div v-for="item in cartItems" class="d-flex align-items-center">
+                    <img :src="item.img" alt="" width="100">
+                    <div>
+                        {{item.title}} {{item.color}}<br> {{item.size}}<br>NT.{{item.price}}
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
