@@ -63,7 +63,7 @@
                     </div>
                     <button class="btn btn-danger btn-sm">移除</button>
                 </div>
-                <button v-if="cartNumber > 0" class="btn btn-outline-danger">清空購物車</button>
+                <button v-if="cartNumber > 0" class="btn btn-outline-danger" @click="clearCart()">清空購物車</button>
             </div>
         </div>
         <div class="container">
@@ -228,12 +228,15 @@
             methods:{
                 addToCart(idx){
                     this.cartItems.push(this.products[idx]);
+                },
+                clearCart(){
+                    this.cartItems.length = 0;
                 }
             },
             computed:{
                 cartNumber(){
                     return this.cartItems.length;
-                }
+                },
             }
         }).mount('#app')
     </script>
